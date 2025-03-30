@@ -19,7 +19,9 @@
       </div>
     </div>
     <nav class="navbar">
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰ <span class="hamburger-label">Menu</span>
+      </div>
       <ul id="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">HVAC</a></li>
@@ -85,9 +87,7 @@
     <h2>What Our Customers Are Saying</h2>
     <div class="testimonial-container">
       <button class="arrow" onclick="prevTestimonial()">&#10094;</button>
-      <div class="testimonial" id="testimonial">
-        <!-- Filled by JS -->
-      </div>
+      <div class="testimonial" id="testimonial"></div>
       <button class="arrow" onclick="nextTestimonial()">&#10095;</button>
     </div>
   </section>

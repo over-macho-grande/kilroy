@@ -60,6 +60,7 @@ header {
 /* Navigation */
 .navbar {
   background: #155b2f;
+  position: relative;
 }
 
 .navbar ul {
@@ -81,7 +82,7 @@ header {
   font-weight: 500;
 }
 
-/* Hamburger Menu (mobile only) */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 1.5rem;
@@ -93,16 +94,17 @@ header {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    text-align: right;
   }
 
-  .navbar ul {
+  #nav-menu {
     display: none;
     flex-direction: column;
     background: #155b2f;
     padding: 1rem;
   }
 
-  .navbar ul.show {
+  #nav-menu.show {
     display: flex;
   }
 }
@@ -358,5 +360,18 @@ footer a {
 
   .hero-text h2 {
     font-size: 1.25rem;
+  }
+}
+
+/* Hamburger label next to ☰ icon */
+.hamburger-label {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 769px) {
+  .hamburger-label {
+    display: none;
   }
 }
