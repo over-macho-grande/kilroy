@@ -18,7 +18,8 @@
       </div>
     </div>
     <nav class="navbar">
-      <ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">HVAC</a></li>
         <li><a href="#">Insulation</a></li>
@@ -30,6 +31,7 @@
       </ul>
     </nav>
   </header>
+
   <section class="hero">
     <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image">
     <div class="hero-text">
@@ -37,6 +39,7 @@
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
+
   <section class="services">
     <div class="service-box">
       <img src="assets/hvac_1.jpg" alt="HVAC system" />
@@ -44,7 +47,7 @@
       <p>Stay comfortable year-round with expert heating, cooling, and indoor air quality solutions.</p>
       <a href="#" class="service-btn">View HVAC Services</a>
     </div>
-  
+
     <div class="service-box">
       <img src="assets/insulation_1.jpg" alt="Insulation" />
       <h3>Insulation Services</h3>
@@ -52,6 +55,7 @@
       <a href="#" class="service-btn">Improve Your Home’s Efficiency</a>
     </div>
   </section>
+
   <section class="other-services">
     <h2>More Home Services</h2>
     <div class="service-grid">
@@ -75,18 +79,18 @@
       </div>
     </div>
   </section>
-  
+
   <section class="testimonials">
     <h2>What Our Customers Are Saying</h2>
     <div class="testimonial-container">
       <button class="arrow" onclick="prevTestimonial()">&#10094;</button>
       <div class="testimonial" id="testimonial">
-        <p>"Kilroy Home Services was quick, clean, and professional. Our insulation upgrade made a huge difference!"</p>
-        <h4>- Sarah T.</h4>
+        <!-- Filled by JS -->
       </div>
       <button class="arrow" onclick="nextTestimonial()">&#10095;</button>
     </div>
   </section>
+
   <section class="why-choose-us">
     <h2>Why Choose Kilroy Home Services?</h2>
     <ul>
@@ -97,7 +101,7 @@
       <li>✔ Locally owned and community trusted</li>
     </ul>
   </section>
-  
+
   <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
     <form>
@@ -116,26 +120,21 @@
       <button type="submit">Request a Free Estimate</button>
     </form>
   </section>
-  
+
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> | Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
-  
-  <!-- Chat Icon -->
+
   <div class="chat-icon">
     <img src="assets/chat-icon.png" alt="Chat with us">
+    <span class="chat-label">Chat With Us!</span>
   </div>
-  
-  
-  <!-- Chat Icon -->
-  <div class="chat-icon">
-    <img src="assets/chat-icon.png" alt="Chat with us">
-  </div>
-  
+
   <script src="js/script.js"></script>
 </body>
 </html>

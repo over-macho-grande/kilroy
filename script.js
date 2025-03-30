@@ -21,6 +21,7 @@ const testimonials = [
   
   function showTestimonial(index) {
     const testimonial = document.getElementById("testimonial");
+    if (!testimonial) return;
     testimonial.style.opacity = 0;
     setTimeout(() => {
       testimonial.innerHTML = `
@@ -41,8 +42,12 @@ const testimonials = [
     showTestimonial(current);
   }
   
-  // Initialize
   document.addEventListener("DOMContentLoaded", () => {
     showTestimonial(current);
   });
+  
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    nav.classList.toggle("show");
+  }
   

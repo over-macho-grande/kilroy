@@ -1,13 +1,18 @@
-/* Global Styles */
+/* Reset & Base Styles */
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
   background: #f8f8f8;
   color: #222;
 }
 
-/* Header */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header & Top Bar */
 header {
   background: #fff;
   border-bottom: 1px solid #ccc;
@@ -36,20 +41,20 @@ header {
 }
 
 .phone {
-  color: #155b2f;
-  text-decoration: none;
   display: block;
+  text-decoration: none;
+  color: #155b2f;
   margin: 0.5rem 0;
 }
 
 .quote-btn {
   background: #39e75f;
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
-  color: #fff;
   font-weight: bold;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Navigation */
@@ -62,24 +67,49 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-  margin: 0.5rem;
+  margin: 0.5rem 1rem;
 }
 
 .navbar a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: 500;
+}
+
+/* Hamburger Menu (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #155b2f;
+    padding: 1rem;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  width: 100%;
   height: 50vh;
   max-height: 500px;
   overflow: hidden;
@@ -97,193 +127,89 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
-  padding: 0 1rem;
+  text-align: center;
 }
 
 .hero-text h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
   text-shadow: 1px 1px 4px #000;
+  margin-bottom: 1rem;
 }
 
 .cta-button {
-  background-color: #39e75f;
-  color: #fff;
+  background: #39e75f;
+  color: white;
   padding: 0.75rem 1.5rem;
-  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #2db44a;
+/* Services Section */
+.services,
+.other-services {
+  padding: 2rem 1rem;
+  background: #fff;
+  text-align: center;
 }
 
-/* Mobile Fixes */
-@media (max-width: 600px) {
-  .hero-text h2 {
-    font-size: 1.2rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
-  }
-
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .header-info {
-    text-align: left;
-  }
+.service-box,
+.service-card {
+  background: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 400px;
+  margin: 1rem;
+  text-align: center;
+  flex: 1 1 300px;
 }
 
 .services {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem 1rem;
-  background: #fff;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
-.service-box {
-  background: #f1f1f1;
-  border-radius: 8px;
-  max-width: 400px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  flex: 1 1 300px;
-}
-
-.service-box img {
+.service-box img,
+.service-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.service-box h3 {
-  margin: 1rem 0 0.5rem;
-  color: #155b2f;
-}
-
-.service-box p {
-  padding: 0 1rem 1rem;
-  font-size: 0.95rem;
-}
-
-.service-btn {
+.service-btn,
+.learn-btn {
   display: inline-block;
-  margin-bottom: 1.5rem;
-  background: #39e75f;
-  color: #fff;
+  margin: 1rem;
   padding: 0.5rem 1rem;
-  text-decoration: none;
+  background: #39e75f;
+  color: white;
   font-weight: bold;
   border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.service-btn:hover {
-  background: #2db44a;
-}
-
-/* Stack vertically on mobile */
-@media (max-width: 768px) {
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.other-services {
-  padding: 2rem 1rem;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.other-services h2 {
-  font-size: 1.8rem;
-  color: #155b2f;
-  margin-bottom: 1.5rem;
-}
-
-.service-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.service-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 300px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.service-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.service-card h3 {
-  margin-top: 1rem;
-  color: #155b2f;
-}
-
-.service-card p {
-  padding: 0 1rem 1rem;
-  font-size: 0.95rem;
+  text-decoration: none;
 }
 
 .learn-btn {
   background: #155b2f;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-  transition: background 0.3s ease;
 }
 
-.learn-btn:hover {
-  background: #0f4a26;
+/* Other Services Grid */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-/* Mobile stack */
-@media (max-width: 768px) {
-  .service-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
+/* Testimonials */
 .testimonials {
   background: #fff;
-  padding: 3rem 1rem;
   text-align: center;
-}
-
-.testimonials h2 {
-  color: #155b2f;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  padding: 2rem 1rem;
 }
 
 .testimonial-container {
@@ -292,28 +218,14 @@ header {
   justify-content: center;
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
 }
 
 .testimonial {
-  padding: 1rem 2rem;
-  max-width: 600px;
   background: #f1f1f1;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: opacity 0.3s ease-in-out;
-}
-
-.testimonial p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.testimonial h4 {
-  margin: 0;
-  color: #155b2f;
-  font-weight: bold;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .arrow {
@@ -323,23 +235,14 @@ header {
   color: #155b2f;
   cursor: pointer;
   padding: 0 1rem;
-  transition: color 0.3s;
 }
 
-.arrow:hover {
-  color: #39e75f;
-}
-
+/* Why Choose Us */
 .why-choose-us {
   background: #155b2f;
   color: white;
   padding: 2rem 1rem;
   text-align: center;
-}
-
-.why-choose-us h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .why-choose-us ul {
@@ -352,19 +255,13 @@ header {
 
 .why-choose-us li {
   margin: 0.5rem 0;
-  font-size: 1rem;
 }
 
+/* Contact Form */
 .contact-form {
   background: #f1f1f1;
   padding: 2rem 1rem;
   text-align: center;
-}
-
-.contact-form h2 {
-  font-size: 1.8rem;
-  color: #155b2f;
-  margin-bottom: 1.5rem;
 }
 
 .contact-form form {
@@ -384,20 +281,15 @@ header {
 
 .contact-form button {
   background: #39e75f;
-  color: #fff;
-  border: none;
-  padding: 0.75rem;
-  font-size: 1rem;
+  color: white;
   font-weight: bold;
+  padding: 0.75rem;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
-  background: #2db44a;
-}
-
+/* Footer */
 footer {
   background: #155b2f;
   color: white;
@@ -407,18 +299,8 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: white;
   text-decoration: underline;
-}
-
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons img {
-  width: 24px;
-  margin: 0 0.5rem;
-  filter: brightness(0) invert(1);
 }
 
 /* Chat Icon */
@@ -427,14 +309,45 @@ footer a {
   bottom: 20px;
   right: 20px;
   background: #39e75f;
-  padding: 0.75rem;
-  border-radius: 50%;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   cursor: pointer;
   z-index: 1000;
 }
 
 .chat-icon img {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.chat-label {
+  display: inline;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .chat-label {
+    display: none;
+  }
+}
+
+/* Fix long CTA button text on mobile */
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    max-width: 90%;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .hero-text h2 {
+    font-size: 1.25rem;
+  }
 }
