@@ -129,6 +129,7 @@ header {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .hero-text h2 {
@@ -145,6 +146,13 @@ header {
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 90vw;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* Services Section */
@@ -345,6 +353,7 @@ footer a {
     max-width: 90%;
     white-space: normal;
     line-height: 1.2;
+    word-break: break-word;
   }
 
   .hero-text h2 {
