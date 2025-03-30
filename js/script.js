@@ -18,11 +18,14 @@ const testimonials = [
 ];
 
 let current = 0;
+let autoRotateInterval;
 
 function showTestimonial(index) {
   const testimonial = document.getElementById("testimonial");
   if (!testimonial) return;
+
   testimonial.style.opacity = 0;
+
   setTimeout(() => {
     testimonial.innerHTML = `
       <p>${testimonials[index].quote}</p>
@@ -42,11 +45,48 @@ function nextTestimonial() {
   showTestimonial(current);
 }
 
+// Auto-rotate every 6 seconds
+function startAutoRotate() {
+  autoRotateInterval = setInterval(() => {
+    nextTestimonial();
+  }, 6000);
+}
+
+// Mobile nav toggle
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
-  nav.classList.toggle("show");
+  const burger = document.getElementById("hamburger");
+
+  const isOpen = nav.classList.toggle("show");
+  burger.classList.toggle("open", isOpen);
+  burger.setAttribute("aria-expanded", isOpen);
+}
+
+function closeMenu() {
+  const nav = document.getElementById("nav-menu");
+  const burger = document.getElementById("hamburger");
+
+  nav.classList.remove("show");
+  burger.classList.remove("open");
+  burger.setAttribute("aria-expanded", "false");
+}
+
+// Scroll-triggered animations
+function setupFadeInOnScroll() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+        observer.unobserve(entry.target); // Animate once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".fade-section").forEach(el => observer.observe(el));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   showTestimonial(current);
+  startAutoRotate();
+  setupFadeInOnScroll();
 });
