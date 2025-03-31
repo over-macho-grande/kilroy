@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+    }
+    h2 {
+      color: #155b2f;
+    }
+  </style>
+</head>
+<body>
+  <h2>Scheduling (TidyCal)</h2>
+  <!-- Replace with your TidyCal booking URL -->
+  <iframe src="https://tidycal.com/russcrossen"></iframe>
+
+  <h2>Live Chat (Tawk.to)</h2>
+  <p>The chat widget is visible in the lower-right corner.</p>
+
+  <!-- Tawk.to Widget -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  <script>
+    // Redirect to login if not logged in
+    if (!localStorage.getItem('loggedIn')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
