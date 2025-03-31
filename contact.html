@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Kilroy Home Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.ico" type="image/png" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+      <div class="header-info">
+        <h1>KILROY HOME SERVICES</h1>
+        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+        <button class="quote-btn">Get a Free Quote</button>
+      </div>
+    </div>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        ☰ <span class="hamburger-label">Menu</span>
+      </div>
+      <ul id="nav-menu">
+        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="assets/kilroy-trucks.png" alt="Kilroy Team" class="hero-image">
+    <div class="hero-text">
+      <h2>Let’s Talk About Your Project</h2>
+      <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="services fade-section">
+    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+      <h3>Get in Touch</h3>
+      <p>Whether you have a question about services, pricing, or scheduling, our team is happy to help. Call us or use the form below and we’ll get back to you promptly.</p>
+
+      <ul>
+        <li><strong>Phone:</strong> <a href="tel:2166812500">(216) 681-2500</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></li>
+        <li><strong>Office:</strong> 123 Main St, Cleveland, OH 44101</li>
+        <li><strong>Hours:</strong> Monday–Friday, 8am–5pm</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form fade-section" id="contact">
+    <h2>Request a Free Estimate</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email Address" required />
+      <select required>
+        <option value="">Select a Service</option>
+        <option value="hvac">HVAC</option>
+        <option value="insulation">Insulation</option>
+        <option value="roofing">Roofing</option>
+        <option value="siding">Siding</option>
+        <option value="windows">Windows & Doors</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Request a Free Estimate</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Kilroy Home Services</p>
+      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+      <p>123 Main St, Cleveland, OH 44101</p>
+    </div>
+  </footer>
+
+  <!-- Chat Icon -->
+  <div class="chat-icon">
+    <img src="assets/chat-icon.png" alt="Chat with us">
+    <span class="chat-label">Chat With Us!</span>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
