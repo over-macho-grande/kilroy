@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siding Services | Kilroy Home Services</title>
+  <title>Siding | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
@@ -36,38 +36,31 @@
   </header>
 
   <section class="hero">
-    <img src="assets/siding.jpg" alt="Home Siding" class="hero-image">
+    <img src="assets/siding.jpg" alt="Home Siding Options" class="hero-image" />
     <div class="hero-text">
-      <h2>Protect & Beautify Your Home</h2>
+      <h2>Beautiful, Durable Siding</h2>
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <section class="content-wrapper">
-    <div class="content-main">
-      <h3>Siding Services</h3>
-      <p>New siding can drastically improve curb appeal, increase home value, and provide lasting protection against Ohio’s unpredictable weather.</p>
-
+  <section class="fade-section services">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: left;">
+      <h2>Siding Services</h2>
       <ul>
-        <li><strong>Vinyl Siding</strong> – Affordable, low-maintenance, and energy-efficient.</li>
-        <li><strong>Fiber Cement</strong> – Durable and stylish with great weather resistance.</li>
-        <li><strong>Wood Siding</strong> – Timeless beauty and natural insulation.</li>
-        <li><strong>Full Replacement & Repair</strong> – From single panel fixes to full wraps.</li>
+        <li><strong>Vinyl Siding</strong> – Affordable, low-maintenance, and available in many styles and colors.</li>
+        <li><strong>Fiber Cement Siding</strong> – High durability with a wood-like appearance that resists rot and fire.</li>
+        <li><strong>Wood Siding</strong> – Timeless curb appeal for classic homes, customizable to your vision.</li>
+        <li><strong>Complete Replacements & Repairs</strong> – We handle everything from a single panel to a full exterior renovation.</li>
       </ul>
 
-      <h3>Why Invest in New Siding?</h3>
-      <p>Worn or damaged siding can allow moisture intrusion and raise energy costs. We help you choose siding that matches your home and your budget while offering years of protection.</p>
+      <h3>Why New Siding Matters</h3>
+      <p>Good siding improves energy efficiency, enhances curb appeal, and protects your structure from the elements. We’ll help you pick the perfect material and style for your home.</p>
     </div>
-
-    <aside class="sidebar">
-      <h4>Ready to Refresh Your Exterior?</h4>
-      <a class="sidebar-btn" href="#contact">Get a Free Siding Quote</a>
-    </aside>
   </section>
 
-  <section class="contact-form" id="contact">
+  <section class="contact-form fade-section" id="contact">
     <h2>Request a Free Estimate</h2>
-    <form>
+    <form action="thank-you.html" method="post">
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <input type="email" placeholder="Email Address" required />
@@ -76,7 +69,7 @@
         <option value="hvac">HVAC</option>
         <option value="insulation">Insulation</option>
         <option value="roofing">Roofing</option>
-        <option value="siding" selected>Siding</option>
+        <option value="siding">Siding</option>
         <option value="windows">Windows & Doors</option>
         <option value="other">Other</option>
       </select>
@@ -99,29 +92,23 @@
     <span class="chat-label">Chat With Us!</span>
   </div>
 
-  <script src="js/script.js"></script>
+  <!-- ✅ Tawk.to with Widget Hidden -->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
-      s1.src = 'https://embed.tawk.to/YOUR_TAWKTO_PROPERTY_ID/default';
+      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
       s1.charset = 'UTF-8';
       s1.setAttribute('crossorigin', '*');
       s0.parentNode.insertBefore(s1, s0);
     })();
-  
-    // Hide widget and launch on custom button click
-    Tawk_API.onLoad = function () {
-      Tawk_API.hideWidget();
-      const launcher = document.getElementById("custom-chat-launcher");
-      if (launcher) {
-        launcher.addEventListener("click", () => {
-          Tawk_API.maximize();
-        });
-      }
-    };
-  </script>  
+    setInterval(() => {
+      const nativeWidget = document.querySelector("iframe[src*='tawk']");
+      if (nativeWidget) nativeWidget.style.display = 'none';
+    }, 500);
+  </script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

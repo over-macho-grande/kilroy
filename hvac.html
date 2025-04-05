@@ -36,16 +36,16 @@
   </header>
 
   <section class="hero">
-    <img src="assets/hvac_1.jpg" alt="HVAC System" class="hero-image">
+    <img src="assets/hvac_1.jpg" alt="HVAC system" class="hero-image" />
     <div class="hero-text">
       <h2>Reliable Heating & Cooling in Northeast Ohio</h2>
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <section class="content-wrapper">
-    <div class="content-main">
-      <h3>Our HVAC Services</h3>
+  <section class="fade-section services">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: left;">
+      <h2>Our HVAC Services</h2>
       <ul>
         <li><strong>Furnace Installation & Replacement</strong> – Upgrade your heating system for better comfort and efficiency.</li>
         <li><strong>Air Conditioning Repair</strong> – Fast diagnosis and repairs for peak cooling performance.</li>
@@ -55,21 +55,19 @@
       </ul>
 
       <h3>Why Upgrade Your HVAC System?</h3>
-      <p>Ohio's climate demands heating and cooling systems that are powerful, efficient, and dependable. New systems with smart thermostats and high-efficiency ratings help lower your bills and increase home comfort.</p>
+      <p>Ohio’s climate demands heating and cooling systems that are powerful, efficient, and dependable. New systems with smart thermostats and high-efficiency ratings help lower your bills and increase home comfort.</p>
 
       <h3>Need Help?</h3>
       <p>Our team is ready to help you choose the best HVAC solution for your home or business.</p>
-    </div>
 
-    <aside class="sidebar">
-      <h4>Need a Quote?</h4>
-      <a class="sidebar-btn" href="#contact">Schedule a Consultation</a>
-    </aside>
+      <p><strong>Need a Quote?</strong><br>
+      <a href="#contact">Schedule a Consultation</a></p>
+    </div>
   </section>
 
-  <section class="contact-form" id="contact">
+  <section class="contact-form fade-section" id="contact">
     <h2>Request a Free Estimate</h2>
-    <form>
+    <form action="thank-you.html" method="post">
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <input type="email" placeholder="Email Address" required />
@@ -90,7 +88,7 @@
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
@@ -102,28 +100,5 @@
   </div>
 
   <script src="js/script.js"></script>
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/YOUR_TAWKTO_PROPERTY_ID/default';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  
-    // Hide widget and launch on custom button click
-    Tawk_API.onLoad = function () {
-      Tawk_API.hideWidget();
-      const launcher = document.getElementById("custom-chat-launcher");
-      if (launcher) {
-        launcher.addEventListener("click", () => {
-          Tawk_API.maximize();
-        });
-      }
-    };
-  </script>  
 </body>
 </html>
