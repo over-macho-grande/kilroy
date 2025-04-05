@@ -412,7 +412,37 @@ footer {
     word-break: break-word;
   }
 
-  .hero-text h2 {
+  .hero-text h2 {s
     font-size: 1.25rem;
   }
+}
+
+/* Hide the native tawk.to minimized bubble */
+#tawkchat-minimized {
+  display: none !important;
+}
+
+/* Custom chat button styling */
+.custom-chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2abf3a;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-family: 'Montserrat', sans-serif;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-chat-btn:hover {
+  background-color: #239d30;
+}
+
+#tawkchat-container {
+  display: none !important;
 }

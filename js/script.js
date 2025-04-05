@@ -103,3 +103,15 @@ document.addEventListener("DOMContentLoaded", () => {
   s1.setAttribute("crossorigin", "*");
   s0.parentNode.insertBefore(s1, s0);
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var customChat = document.getElementById("custom-chat-launcher");
+
+  if (customChat) {
+    customChat.addEventListener("click", function () {
+      if (typeof Tawk_API !== "undefined") {
+        Tawk_API.maximize();
+      }
+    });
+  }
+});
