@@ -9,7 +9,6 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="top-bar">
       <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
@@ -36,42 +35,39 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <img src="assets/roofing.jpg" alt="New Roof Installation" class="hero-image">
+    <img src="assets/roofing.jpg" alt="New Roof" class="hero-image">
     <div class="hero-text">
-      <h2>Protect Your Home with Professional Roofing</h2>
-      <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+      <h2>Protect What Matters Most</h2>
+      <a href="#contact" class="cta-button">Schedule a Free Roof Inspection</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="services fade-section">
-    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
-      <h3>Our Roofing Services</h3>
+  <section class="content-wrapper">
+    <div class="content-main">
+      <h3>Roofing Services</h3>
+      <p>We offer complete roofing solutions for homes and businesses, including inspections, repairs, replacements, and storm damage response. Our certified professionals work with top materials like asphalt shingles, metal roofing, and flat roofing systems.</p>
+
       <ul>
-        <li><strong>Roof Inspections</strong> – We assess your roof for leaks, damage, aging, and storm impact.</li>
-        <li><strong>Roof Repairs</strong> – From missing shingles to flashing issues, we provide fast, reliable repairs.</li>
-        <li><strong>Full Roof Replacements</strong> – Tear-off and replacement using durable, weather-resistant materials.</li>
-        <li><strong>Storm Damage Restoration</strong> – Emergency repairs and insurance claim support for hail, wind, and water damage.</li>
-        <li><strong>Ventilation & Flashing</strong> – We ensure your roof is breathable and sealed against leaks.</li>
+        <li><strong>Free Roof Inspections</strong> – Check for leaks, damage, and aging.</li>
+        <li><strong>Roof Repairs</strong> – Fast, affordable fixes to prevent bigger problems.</li>
+        <li><strong>New Roof Installation</strong> – Full tear-offs, replacements, and upgrades.</li>
+        <li><strong>Storm & Hail Damage Repairs</strong> – Insurance assistance and restoration services.</li>
       </ul>
 
-      <h3>Why Invest in a New Roof?</h3>
-      <p>Ohio’s tough seasons can wear out your roof over time. A professionally installed roof not only protects your property but also improves curb appeal and energy efficiency. New materials are longer-lasting, safer, and more resistant to wind and weather extremes.</p>
-
-      <h3>Need Help?</h3>
-      <p>Whether it’s time for repairs or a full replacement, our team is ready to guide you through every step of your roofing project.</p>
-
-      <h4>Need a Quote?</h4>
-      <a class="cta-button" href="#contact">Schedule a Consultation</a>
+      <h3>Local & Trusted Roofing Pros</h3>
+      <p>As a Northeast Ohio roofing company, we understand the challenges our weather presents. We’re here to help you stay dry, safe, and confident in your roof.</p>
     </div>
+
+    <aside class="sidebar">
+      <h4>Need a Roof Estimate?</h4>
+      <a class="sidebar-btn" href="#contact">Request a Free Roof Inspection</a>
+    </aside>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-form fade-section" id="contact">
+  <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
-    <form action="thank-you.html" method="post">
+    <form>
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <input type="email" placeholder="Email Address" required />
@@ -79,7 +75,7 @@
         <option value="">Select a Service</option>
         <option value="hvac">HVAC</option>
         <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
+        <option value="roofing" selected>Roofing</option>
         <option value="siding">Siding</option>
         <option value="windows">Windows & Doors</option>
         <option value="other">Other</option>
@@ -88,7 +84,6 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
@@ -97,6 +92,12 @@
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
+
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

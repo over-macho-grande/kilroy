@@ -9,7 +9,6 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="top-bar">
       <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
@@ -32,43 +31,41 @@
         <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
         <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
         <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <img src="assets/insulation_1.jpg" alt="Attic Insulation" class="hero-image">
+    <img src="assets/insulation_1.jpg" alt="Home Insulation" class="hero-image">
     <div class="hero-text">
-      <h2>Stay Warm, Save Energy with Better Insulation</h2>
+      <h2>Save Energy & Stay Comfortable</h2>
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="services fade-section">
-    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
-      <h3>Our Insulation Services</h3>
+  <section class="content-wrapper">
+    <div class="content-main">
+      <h3>Insulation Services</h3>
+      <p>Whether you’re sealing an attic, updating your walls, or insulating a crawl space, we offer energy-efficient insulation solutions that improve comfort and reduce heating and cooling costs.</p>
+
       <ul>
-        <li><strong>Attic Insulation Upgrades</strong> – Improve thermal performance and reduce heat loss with high-efficiency attic insulation.</li>
-        <li><strong>Wall Insulation</strong> – Add insulation to exterior walls for greater comfort and noise reduction.</li>
-        <li><strong>Air Sealing</strong> – Stop drafts and leaks around windows, doors, and framing with professional sealing.</li>
-        <li><strong>Blown-In & Spray Foam Options</strong> – Choose the right insulation method for your home’s layout and energy goals.</li>
-        <li><strong>Energy Assessments</strong> – Our team identifies the areas where insulation will make the biggest impact.</li>
+        <li><strong>Attic Insulation</strong> – Keep heat in during winter and out during summer.</li>
+        <li><strong>Wall & Crawl Space Insulation</strong> – Target key areas for better whole-home efficiency.</li>
+        <li><strong>Blown-In & Batt Insulation</strong> – Choose the right type for your space and budget.</li>
+        <li><strong>Energy Savings</strong> – Proper insulation can lower energy bills by up to 20%.</li>
       </ul>
 
-      <h3>Why Insulate?</h3>
-      <p>Proper insulation is one of the most cost-effective ways to lower energy bills, stay comfortable year-round, and reduce wear on your HVAC system. Whether you're dealing with icy drafts in the winter or trapped heat in the summer, we’ve got you covered.</p>
-
-      <h3>Need Help?</h3>
-      <p>We’ll help you decide which insulation upgrades will deliver the best performance and savings for your specific home or business.</p>
-
-      <h4>Need a Quote?</h4>
-      <a class="cta-button" href="#contact">Schedule a Consultation</a>
+      <h3>Why It Matters</h3>
+      <p>With Ohio’s hot summers and freezing winters, insulation is your best defense against rising energy bills and uncomfortable rooms. Let us help you identify gaps and upgrade where it matters most.</p>
     </div>
+
+    <aside class="sidebar">
+      <h4>Need an Energy Audit?</h4>
+      <a class="sidebar-btn" href="#contact">Schedule a Free Estimate</a>
+    </aside>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-form fade-section" id="contact">
+  <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
     <form>
       <input type="text" placeholder="Full Name" required />
@@ -87,15 +84,20 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
+
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

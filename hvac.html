@@ -9,7 +9,6 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="top-bar">
       <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
@@ -36,7 +35,6 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <img src="assets/hvac_1.jpg" alt="HVAC System" class="hero-image">
     <div class="hero-text">
@@ -45,9 +43,8 @@
     </div>
   </section>
 
-  <!-- Main HVAC Section -->
-  <section class="services fade-section">
-    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+  <section class="content-wrapper">
+    <div class="content-main">
       <h3>Our HVAC Services</h3>
       <ul>
         <li><strong>Furnace Installation & Replacement</strong> – Upgrade your heating system for better comfort and efficiency.</li>
@@ -62,14 +59,15 @@
 
       <h3>Need Help?</h3>
       <p>Our team is ready to help you choose the best HVAC solution for your home or business.</p>
-
-      <h4>Need a Quote?</h4>
-      <a class="cta-button" href="#contact">Schedule a Consultation</a>
     </div>
+
+    <aside class="sidebar">
+      <h4>Need a Quote?</h4>
+      <a class="sidebar-btn" href="#contact">Schedule a Consultation</a>
+    </aside>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-form fade-section" id="contact">
+  <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
     <form>
       <input type="text" placeholder="Full Name" required />
@@ -88,15 +86,20 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
+
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

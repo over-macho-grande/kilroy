@@ -9,7 +9,6 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="top-bar">
       <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
@@ -36,42 +35,40 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <img src="assets/windows.jpg" alt="Windows and Doors" class="hero-image">
     <div class="hero-text">
-      <h2>Beautiful, Energy-Efficient Windows & Doors</h2>
+      <h2>Upgrade Your Windows & Doors</h2>
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="services fade-section">
-    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
-      <h3>Window & Door Replacement Services</h3>
+  <section class="content-wrapper">
+    <div class="content-main">
+      <h3>Windows & Doors Services</h3>
+      <p>Whether you're replacing aging fixtures or remodeling for curb appeal, we provide top-tier window and door solutions tailored to Ohio's seasons.</p>
+
       <ul>
-        <li><strong>Energy-Efficient Window Installation</strong> – Save on heating and cooling with double- or triple-pane windows.</li>
-        <li><strong>Entry & Patio Doors</strong> – Stylish, secure, and durable options for every entryway.</li>
-        <li><strong>Storm Doors</strong> – Extra protection from Ohio’s harsh weather with custom-fitted storm doors.</li>
-        <li><strong>Window & Door Repairs</strong> – We fix cracked panes, broken seals, and stuck doors and windows.</li>
-        <li><strong>Custom Sizing & Styling</strong> – Modernize your curb appeal with a wide range of materials and finishes.</li>
+        <li><strong>Energy-Efficient Windows</strong> – Lower utility costs with double- or triple-pane windows.</li>
+        <li><strong>Entry Doors</strong> – Durable, secure, and beautiful front door options.</li>
+        <li><strong>Sliding Patio Doors</strong> – Easy operation with modern finishes.</li>
+        <li><strong>Storm Doors</strong> – Protection from the elements with added insulation.</li>
+        <li><strong>Professional Installation</strong> – Ensure proper sealing, alignment, and performance.</li>
       </ul>
 
-      <h3>Why Upgrade Your Windows and Doors?</h3>
-      <p>Old, drafty windows and doors are one of the biggest sources of energy loss in a home. New energy-efficient models can lower utility bills, improve indoor comfort, reduce noise, and boost home value.</p>
-
-      <h3>Professional Installation Guaranteed</h3>
-      <p>From precise measurements to clean installations, Kilroy delivers quality service with every window and door we install.</p>
-
-      <h4>Get a Free Consultation</h4>
-      <a class="cta-button" href="#contact">Get Started Today</a>
+      <h3>Why Update?</h3>
+      <p>Outdated or drafty windows and doors can impact energy bills, comfort, and safety. New installations offer aesthetic value and long-term savings.</p>
     </div>
+
+    <aside class="sidebar">
+      <h4>Let the Light In</h4>
+      <a class="sidebar-btn" href="#contact">Request a Free Quote</a>
+    </aside>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-form fade-section" id="contact">
+  <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
-    <form action="thank-you.html" method="post">
+    <form>
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <input type="email" placeholder="Email Address" required />
@@ -81,22 +78,27 @@
         <option value="insulation">Insulation</option>
         <option value="roofing">Roofing</option>
         <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
+        <option value="windows" selected>Windows & Doors</option>
         <option value="other">Other</option>
       </select>
       <button type="submit">Request a Free Estimate</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
+
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

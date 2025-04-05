@@ -9,7 +9,6 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="top-bar">
       <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
@@ -36,42 +35,39 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <img src="assets/siding.jpg" alt="Siding installation" class="hero-image">
+    <img src="assets/siding.jpg" alt="Home Siding" class="hero-image">
     <div class="hero-text">
-      <h2>Durable, Beautiful Siding Solutions</h2>
+      <h2>Protect & Beautify Your Home</h2>
       <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="services fade-section">
-    <div style="max-width: 900px; margin: 0 auto; text-align: left;">
-      <h3>Our Siding Services</h3>
+  <section class="content-wrapper">
+    <div class="content-main">
+      <h3>Siding Services</h3>
+      <p>New siding can drastically improve curb appeal, increase home value, and provide lasting protection against Ohio’s unpredictable weather.</p>
+
       <ul>
-        <li><strong>Vinyl Siding Installation</strong> – Affordable, low-maintenance, and available in a wide range of colors.</li>
-        <li><strong>Fiber Cement Siding</strong> – Long-lasting, weather-resistant, and ideal for tough Midwest conditions.</li>
-        <li><strong>Wood Siding</strong> – Natural charm and timeless curb appeal, installed with expert care.</li>
-        <li><strong>Siding Repairs</strong> – We fix damaged, warped, or cracked siding to restore your home’s protection and appearance.</li>
-        <li><strong>Trim, Soffit & Fascia Work</strong> – Complete finishing touches for a fully polished exterior.</li>
+        <li><strong>Vinyl Siding</strong> – Affordable, low-maintenance, and energy-efficient.</li>
+        <li><strong>Fiber Cement</strong> – Durable and stylish with great weather resistance.</li>
+        <li><strong>Wood Siding</strong> – Timeless beauty and natural insulation.</li>
+        <li><strong>Full Replacement & Repair</strong> – From single panel fixes to full wraps.</li>
       </ul>
 
-      <h3>Why Update Your Home’s Siding?</h3>
-      <p>New siding can dramatically improve your home’s curb appeal, energy efficiency, and resistance to wind, moisture, and pests. It's also one of the highest-ROI exterior upgrades you can make.</p>
-
-      <h3>Need Help?</h3>
-      <p>Not sure which siding type is right for your home? We’ll walk you through all your options and deliver expert installation you can count on.</p>
-
-      <h4>Ready to Transform Your Home?</h4>
-      <a class="cta-button" href="#contact">Schedule a Consultation</a>
+      <h3>Why Invest in New Siding?</h3>
+      <p>Worn or damaged siding can allow moisture intrusion and raise energy costs. We help you choose siding that matches your home and your budget while offering years of protection.</p>
     </div>
+
+    <aside class="sidebar">
+      <h4>Ready to Refresh Your Exterior?</h4>
+      <a class="sidebar-btn" href="#contact">Get a Free Siding Quote</a>
+    </aside>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-form fade-section" id="contact">
+  <section class="contact-form" id="contact">
     <h2>Request a Free Estimate</h2>
-    <form action="thank-you.html" method="post">
+    <form>
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <input type="email" placeholder="Email Address" required />
@@ -80,7 +76,7 @@
         <option value="hvac">HVAC</option>
         <option value="insulation">Insulation</option>
         <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
+        <option value="siding" selected>Siding</option>
         <option value="windows">Windows & Doors</option>
         <option value="other">Other</option>
       </select>
@@ -88,15 +84,20 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
+
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
