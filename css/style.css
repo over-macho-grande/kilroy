@@ -417,11 +417,6 @@ footer {
   }
 }
 
-/* Hide the native tawk.to minimized bubble */
-#tawkchat-minimized {
-  display: none !important;
-}
-
 /* Custom chat button styling */
 .custom-chat-btn {
   position: fixed;
@@ -441,8 +436,4 @@ footer {
 
 .custom-chat-btn:hover {
   background-color: #239d30;
-}
-
-#tawkchat-container {
-  display: none !important;
 }
