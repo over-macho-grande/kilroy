@@ -437,3 +437,36 @@ footer {
 .custom-chat-btn:hover {
   background-color: #239d30;
 }
+
+.responsive-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 1300px; /* Height control — adjust if needed */
+  overflow: hidden;
+}
+
+.responsive-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* TidyCal Embed Fix */
+.calendar-embed {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  height: 1100px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
