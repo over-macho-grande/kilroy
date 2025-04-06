@@ -15,7 +15,7 @@
       <div class="header-info">
         <h1>KILROY HOME SERVICES</h1>
         <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn">Get a Free Quote</button>
+        <button class="quote-btn" onclick="location.href='scheduleconsultation.html'">Get a Free Quote</button>
       </div>
     </div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -95,13 +95,26 @@
   <section class="why-choose-us fade-section">
     <h2>Why Choose Kilroy Home Services?</h2>
     <ul>
-      <li>✔ Over 48 years of experience in home services</li>
+      <li>✔ Over 20 years of experience in home services</li>
       <li>✔ Licensed, bonded, and insured professionals</li>
       <li>✔ Satisfaction guaranteed on every project</li>
       <li>✔ Energy-efficient and cost-saving solutions</li>
       <li>✔ Locally owned and community trusted</li>
     </ul>
   </section>
+
+  <!-- ✅ New Service Territory Section -->
+  <section class="fade-section service-area-section">
+    <h2>Our Service Area</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/d/u/0/embed?mid=1-hLOS_wHxP6qig619xj8y_E12m0zixQ&ehbc=2E312F&z=10"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>  
 
   <section class="contact-form fade-section" id="contact">
     <h2>Request a Free Estimate</h2>
@@ -126,13 +139,12 @@
     <div class="footer-content">
       <p>&copy; 2025 Kilroy Home Services</p>
       <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
       <p>123 Main St, Cleveland, OH 44101</p>
     </div>
   </footer>
 
-  <!-- Custom Chat Icon -->
-  <div class="chat-icon" id="custom-chat-launcher">
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
     <img src="assets/chat-icon.png" alt="Chat with us">
     <span class="chat-label">Chat With Us!</span>
   </div>
@@ -144,22 +156,15 @@
       var s1 = document.createElement("script"),
           s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
-      s1.src = 'https://embed.tawk.to/YOUR_TAWKTO_PROPERTY_ID/default';
+      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
       s1.charset = 'UTF-8';
       s1.setAttribute('crossorigin', '*');
       s0.parentNode.insertBefore(s1, s0);
     })();
-  
-    // Hide widget and launch on custom button click
+
     Tawk_API.onLoad = function () {
       Tawk_API.hideWidget();
-      const launcher = document.getElementById("custom-chat-launcher");
-      if (launcher) {
-        launcher.addEventListener("click", () => {
-          Tawk_API.maximize();
-        });
-      }
     };
-  </script>  
+  </script>
 </body>
 </html>
