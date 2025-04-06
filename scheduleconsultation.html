@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test: Chat & Scheduling | Kilroy Home Services</title>
+  <title>Schedule a Free Consultation | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
@@ -15,7 +15,7 @@
       <div class="header-info">
         <h1>KILROY HOME SERVICES</h1>
         <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn">Get a Free Quote</button>
+        <button class="quote-btn" onclick="location.href='scheduleconsultation.html'">Get a Free Quote</button>
       </div>
     </div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -36,15 +36,21 @@
   </header>
 
   <section class="hero">
-    <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image">
+    <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
     <div class="hero-text">
-      <h2>Live Chat & Scheduling Test</h2>
+      <h2>Schedule a Free Consultation</h2>
     </div>
   </section>
 
   <section class="fade-section" style="padding: 2rem 1rem; max-width: 1000px; margin: 0 auto;">
-    <h2>Embedded TidyCal Scheduler</h2>
-    <iframe src="https://tidycal.com/embed/russcrossen" width="100%" height="600" frameborder="0" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+    <div style="position: relative; padding-top: 56.25%; height: 0; overflow: hidden;">
+        <iframe
+          src="https://tidycal.com/russcrossen/service-call-booking"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>      
   </section>
 
   <footer>
@@ -56,21 +62,30 @@
     </div>
   </footer>
 
-  <!-- ✅ Tawk.to Script -->
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-    <!--End of Tawk.to Script-->
+  <!-- ✅ Custom Chat Icon -->
+  <div class="chat-icon" onclick="Tawk_API?.maximize()">
+    <img src="assets/chat-icon.png" alt="Chat with us" />
+    <span class="chat-label">Chat With Us!</span>
+  </div>
 
   <script src="js/script.js"></script>
+
+  <!-- ✅ Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    Tawk_API.onLoad = function () {
+      Tawk_API.hideWidget();
+    };
+  </script>
 </body>
 </html>
