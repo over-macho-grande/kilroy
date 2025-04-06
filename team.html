@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roofing | Kilroy Home Services</title>
+  <title>Meet the Team | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
@@ -15,7 +15,7 @@
       <div class="header-info">
         <h1>KILROY HOME SERVICES</h1>
         <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn">Get a Free Quote</button>
+        <button class="quote-btn" onclick="location.href='scheduleconsultation.html'">Get a Free Quote</button>
       </div>
     </div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -33,52 +33,36 @@
         <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
         <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
         <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>      
+      </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <img src="assets/roofing.jpg" alt="New roof installation" class="hero-image" />
+    <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
     <div class="hero-text">
-      <h2>Reliable Roofing Services</h2>
-      <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
+      <h2>Meet the Kilroy Team</h2>
     </div>
   </section>
 
-  <section class="fade-section services">
-    <div style="max-width: 1000px; margin: 0 auto; text-align: left;">
-      <h2>Roofing Services</h2>
-      <ul>
-        <li><strong>Roof Replacements</strong> – Full tear-offs and installations with durable, weather-resistant materials.</li>
-        <li><strong>Roof Repairs</strong> – Fast and affordable leak fixes, flashing repair, and shingle replacement.</li>
-        <li><strong>Storm Damage Repair</strong> – Emergency repairs and insurance claim support after severe weather.</li>
-        <li><strong>Roof Inspections</strong> – Prevent issues before they start with routine inspections and maintenance.</li>
-      </ul>
+  <section class="fade-section" style="padding: 2rem 1rem; max-width: 1000px; margin: 0 auto;">
+    <p>Our team is made up of skilled, hardworking professionals committed to making your home more comfortable and energy efficient. Get to know the people who make Kilroy Home Services great.</p>
+    
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/team-placeholder.jpg" alt="Team Member Photo" />
+        <h3>Coming Soon</h3>
+        <p>New Team Member</p>
+        <p>Stay tuned! We’ll be adding more friendly faces and expert bios soon.</p>
+      </div>
 
-      <h3>Why Invest in a New Roof?</h3>
-      <p>A quality roof protects your home, improves energy efficiency, and increases resale value. If your roof is over 20 years old or has visible damage, it’s time to talk to Kilroy.</p>
-
-      <p><strong>We’ll help you choose the right solution for your budget and timeline.</strong></p>
+      <!-- More team members can go here -->
+      <div class="team-member">
+        <img src="assets/team-placeholder.jpg" alt="Team Member Photo" />
+        <h3>Coming Soon</h3>
+        <p>New Team Member</p>
+        <p>Stay tuned! We’ll be adding more friendly faces and expert bios soon.</p>
+      </div>
     </div>
-  </section>
-
-  <section class="contact-form fade-section" id="contact">
-    <h2>Request a Free Estimate</h2>
-    <form action="thank-you.html" method="post">
-      <input type="text" placeholder="Full Name" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="email" placeholder="Email Address" required />
-      <select required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <button type="submit">Request a Free Estimate</button>
-    </form>
   </section>
 
   <footer>
@@ -96,23 +80,23 @@
     <span class="chat-label">Chat With Us!</span>
   </div>
 
-  <!-- ✅ Tawk.to with Widget Hidden -->
+  <script src="js/script.js"></script>
+
+  <!-- ✅ Tawk.to Script -->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
       s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
       s1.charset = 'UTF-8';
       s1.setAttribute('crossorigin', '*');
       s0.parentNode.insertBefore(s1, s0);
     })();
-    setInterval(() => {
-      const nativeWidget = document.querySelector("iframe[src*='tawk']");
-      if (nativeWidget) nativeWidget.style.display = 'none';
-    }, 500);
+    Tawk_API.onLoad = function () {
+      Tawk_API.hideWidget();
+    };
   </script>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
