@@ -533,3 +533,28 @@ footer {
   position: absolute;
   left: 0;
 }
+
+/* ✅ Updated for Insulation checklist fix */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+.checklist li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.checklist li::before {
+  content: '✔';
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}

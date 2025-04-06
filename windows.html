@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Windows & Doors | Kilroy Home Services</title>
+  <title>Window & Door Services | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
@@ -15,7 +15,7 @@
       <div class="header-info">
         <h1>KILROY HOME SERVICES</h1>
         <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn">Get a Free Quote</button>
+        <button class="quote-btn" onclick="location.href='scheduleconsultation.html'">Get a Free Quote</button>
       </div>
     </div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -33,30 +33,31 @@
         <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
         <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
         <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>      
+      </ul>
     </nav>
   </header>
 
   <section class="hero">
     <img src="assets/windows.jpg" alt="Windows and Doors" class="hero-image" />
     <div class="hero-text">
-      <h2>Energy-Efficient Windows & Doors</h2>
+      <h2>Upgrade with Energy-Efficient Windows & Doors</h2>
       <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
     </div>
   </section>
 
   <section class="fade-section services">
-    <div style="max-width: 1000px; margin: 0 auto; text-align: left;">
+    <div style="max-width: 1000px; margin: 0 auto;">
       <h2>Window & Door Installation</h2>
-      <ul>
-        <li><strong>Window Replacement</strong> – Choose from double-pane, triple-pane, or low-E options to improve insulation and reduce energy bills.</li>
-        <li><strong>Entry Doors</strong> – Add curb appeal and better security with steel, fiberglass, or wood entry doors.</li>
-        <li><strong>Sliding & Patio Doors</strong> – Beautiful and functional upgrades for outdoor access with modern insulation.</li>
-        <li><strong>Custom Fit & Finish</strong> – Every window and door is measured, installed, and sealed with care.</li>
+      <p>Enhance your home’s beauty, comfort, and energy efficiency with expertly installed, high-performance windows and doors—custom-fit for lasting results.</p>
+      <ul class="checklist">
+        <li><strong>Window Replacement</strong> – Upgrade to energy-efficient double-pane, triple-pane, or low-E glass windows that improve insulation, reduce outside noise, and lower energy bills.</li>
+        <li><strong>Entry Doors</strong> – Make a strong first impression while enhancing security. Choose from steel, fiberglass, or wood entry doors in a variety of elegant designs and finishes.</li>
+        <li><strong>Sliding & Patio Doors</strong> – Create a seamless connection between indoor and outdoor living spaces. Our sliding and patio doors offer smooth operation, modern style, and advanced thermal performance.</li>
+        <li><strong>Custom Fit & Finish</strong> – Every installation is tailored to your home. We ensure precise measurements, a flawless fit, and professional sealing for maximum energy savings and long-term durability.</li>
       </ul>
 
-      <h3>Why Upgrade?</h3>
-      <p>Outdated windows and doors lead to drafts, high energy bills, and poor security. New installations pay for themselves over time and instantly elevate comfort and appearance.</p>
+      <h2>Why Upgrade Your Windows & Doors?</h2>
+      <p>Outdated windows and doors can be a major source of drafts, high energy bills, and reduced security. New, high-efficiency replacements not only improve indoor comfort and energy performance—they also enhance your home’s curb appeal and resale value. It’s an investment that pays off in both savings and style.</p>
     </div>
   </section>
 
@@ -88,13 +89,11 @@
     </div>
   </footer>
 
-  <!-- ✅ Custom Chat Icon -->
   <div class="chat-icon" onclick="Tawk_API?.maximize()">
     <img src="assets/chat-icon.png" alt="Chat with us" />
     <span class="chat-label">Chat With Us!</span>
   </div>
 
-  <!-- ✅ Tawk.to with Widget Hidden -->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
