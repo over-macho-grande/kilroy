@@ -162,6 +162,23 @@ header {
   margin-bottom: 1rem;
 }
 
+.hero.home-hero {
+  width: 100vw;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image.home-hero {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
 .cta-button {
   background: #39e75f;
   color: white;
