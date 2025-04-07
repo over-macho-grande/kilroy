@@ -558,3 +558,29 @@ footer {
   position: absolute;
   left: 0;
 }
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.static-map {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+

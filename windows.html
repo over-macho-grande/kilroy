@@ -15,7 +15,7 @@
       <div class="header-info">
         <h1>KILROY HOME SERVICES</h1>
         <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='scheduleconsultation.html'">Get a Free Quote</button>
+        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
       </div>
     </div>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -62,12 +62,12 @@
   </section>
 
   <section class="contact-form fade-section" id="contact">
-    <h2>Request a Free Estimate</h2>
-    <form action="thank-you.html" method="post">
-      <input type="text" placeholder="Full Name" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="email" placeholder="Email Address" required />
-      <select required>
+    <h2>Contact for More Information</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <select name="service" required>
         <option value="">Select a Service</option>
         <option value="hvac">HVAC</option>
         <option value="insulation">Insulation</option>
@@ -76,9 +76,11 @@
         <option value="windows">Windows & Doors</option>
         <option value="other">Other</option>
       </select>
-      <button type="submit">Request a Free Estimate</button>
+      <textarea name="message" placeholder="Tell us more..."></textarea>
+      <button type="submit">Submit</button>
+      <div id="form-status" class="form-status"></div>
     </form>
-  </section>
+  </section>  
 
   <footer>
     <div class="footer-content">

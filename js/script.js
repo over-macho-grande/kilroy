@@ -1,3 +1,6 @@
+// ===========================
+// Testimonials
+// ===========================
 const testimonials = [
   {
     quote: `"Kilroy Home Services was quick, clean, and professional. Our insulation upgrade made a huge difference!"`,
@@ -45,14 +48,31 @@ function nextTestimonial() {
   showTestimonial(current);
 }
 
-// Auto-rotate every 6 seconds
 function startAutoRotate() {
   autoRotateInterval = setInterval(() => {
     nextTestimonial();
   }, 6000);
 }
 
-// Mobile nav toggle
+// ===========================
+// Fade In on Scroll
+// ===========================
+function setupFadeInOnScroll() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".fade-section").forEach(el => observer.observe(el));
+}
+
+// ===========================
+// Mobile Navigation
+// ===========================
 function toggleMenu() {
   const nav = document.getElementById("nav-menu");
   const burger = document.getElementById("hamburger");
@@ -71,28 +91,19 @@ function closeMenu() {
   burger.setAttribute("aria-expanded", "false");
 }
 
-// Scroll-triggered animations
-function setupFadeInOnScroll() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target); // Animate once
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll(".fade-section").forEach(el => observer.observe(el));
-}
-
+// ===========================
+// On Page Load
+// ===========================
 document.addEventListener("DOMContentLoaded", () => {
   showTestimonial(current);
   startAutoRotate();
   setupFadeInOnScroll();
 });
 
-// Load Tawk.to Live Chat Widget
-(function() {
+// ===========================
+// Tawk.to Live Chat Widget
+// ===========================
+(function () {
   var Tawk_API = Tawk_API || {};
   var Tawk_LoadStart = new Date();
   var s1 = document.createElement("script");
@@ -105,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-  var customChat = document.getElementById("custom-chat-launcher");
+  const customChat = document.getElementById("custom-chat-launcher");
 
   if (customChat) {
     customChat.addEventListener("click", function () {
@@ -113,5 +124,63 @@ document.addEventListener("DOMContentLoaded", function () {
         Tawk_API.maximize();
       }
     });
+  }
+});
+
+// ===========================
+// Form Submission to Netlify Function
+// ===========================
+document.getElementById("contactForm")?.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const status = document.getElementById("form-status");
+
+  const data = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    service: form.service.value,
+    message: form.message.value.trim()
+  };
+
+  if (!data.name || !data.email || !data.phone || !data.service) {
+    status.textContent = "Please fill out all required fields.";
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^[0-9\-\(\) ]{7,20}$/;
+
+  if (!emailPattern.test(data.email)) {
+    status.textContent = "Please enter a valid email address.";
+    form.email.focus();
+    return;
+  }
+
+  if (!phonePattern.test(data.phone)) {
+    status.textContent = "Please enter a valid phone number.";
+    form.phone.focus();
+    return;
+  }
+
+  status.textContent = "Sending...";
+
+  try {
+    const response = await fetch("/.netlify/functions/sendToZapier", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      status.textContent = "Thank you! We'll be in touch soon.";
+      form.reset();
+    } else {
+      status.textContent = "Error submitting the form. Please try again later.";
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    status.textContent = "An unexpected error occurred.";
   }
 });
