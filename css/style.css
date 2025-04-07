@@ -204,142 +204,35 @@ header {
   transform: translateY(-1px);
 }
 
-/* Services */
-.services,
-.other-services {
-  padding: 2rem 1rem;
-  background: #fff;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-box,
-.service-card {
-  background: #f1f1f1;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  max-width: 400px;
-  margin: 1rem;
-  text-align: center;
-  flex: 1 1 300px;
-}
-
-.services {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.service-box img,
-.service-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.service-btn,
-.learn-btn,
-.contact-form button {
-  display: inline-block;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.service-btn {
-  background: #39e75f;
-  color: white;
-}
-
-.learn-btn {
-  background: #155b2f;
-  color: white;
-}
-
-.contact-form button {
-  background: #39e75f;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.service-btn:hover,
-.learn-btn:hover,
-.contact-form button:hover {
-  box-shadow: 0 0 10px rgba(57, 231, 95, 0.5);
-  transform: translateY(-1px);
-}
-
-.service-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-/* Testimonials */
-.testimonials {
-  background: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.testimonial-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.testimonial {
-  background: #f1f1f1;
-  padding: 1.5rem;
-  border-radius: 8px;
-  max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-}
-
-.arrow {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #155b2f;
-  cursor: pointer;
-  padding: 0 1rem;
-}
-
-/* Why Choose Us */
-.why-choose-us {
-  background: #155b2f;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.why-choose-us ul {
+/* Service Section Lists (checklist style) */
+.checklist,
+ul.checklist {
   list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 0 auto;
+  padding-left: 0;
+  margin: 1rem auto;
+  max-width: 900px;
   text-align: left;
 }
 
-.why-choose-us li {
+.checklist li,
+ul.checklist li {
+  list-style-type: none;
   margin: 0.5rem 0;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
 }
+
+.checklist li::before,
+ul.checklist li::before {
+  content: '✔';
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
 
 /* Contact Form */
 .contact-form {
@@ -358,11 +251,20 @@ header {
 }
 
 .contact-form input,
-.contact-form select {
+.contact-form select,
+.contact-form textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 100%;
+}
+
+.contact-form button {
+  background: #39e75f;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -408,6 +310,27 @@ footer {
   }
 }
 
+/* Custom chat button styling */
+.custom-chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2abf3a;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-family: 'Montserrat', sans-serif;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-chat-btn:hover {
+  background-color: #239d30;
+}
+
 /* Animation */
 .fade-section {
   opacity: 0;
@@ -436,162 +359,10 @@ footer {
   }
 }
 
-/* Custom chat button styling */
-.custom-chat-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #2abf3a;
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  font-family: 'Montserrat', sans-serif;
-  z-index: 9999;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.custom-chat-btn:hover {
-  background-color: #239d30;
-}
-
-.responsive-iframe-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 1300px; /* Height control — adjust if needed */
-  overflow: hidden;
-}
-
-.responsive-iframe-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
-}
-
-/* TidyCal Embed Fix */
-.calendar-embed {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  overflow: hidden;
-}
-
-.calendar-embed iframe {
-  width: 100%;
-  height: 1100px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-area-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.map-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
-
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.team-member {
-  text-align: center;
-  max-width: 300px;
-}
-
-.team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* ✔ Bathroom page checklist styling */
-.checklist {
-  list-style: none;
-  padding-left: 0;
-  margin: 1rem auto;
-  max-width: 800px;
-  text-align: left; /* 👈 Fixes alignment */
-}
-
-.checklist li {
-  margin: 0.4rem 0;
-  font-size: 1rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.checklist li::before {
-  content: '✔';
-  color: green;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* ✅ Updated for Insulation checklist fix */
-.checklist {
-  list-style: none;
-  padding-left: 0;
-  margin: 1rem auto;
-  max-width: 900px;
-  text-align: left;
-}
-
-.checklist li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  padding-left: 1.5rem;
-  position: relative;
-  line-height: 1.5;
-}
-
-.checklist li::before {
-  content: '✔';
-  color: green;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
+/* Misc */
 .required {
   color: red;
   font-weight: bold;
-}
-form label {
-  display: block;
-  margin: 0.5rem 0 0.25rem;
-}
-form input, form select, form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 .static-map {
@@ -601,5 +372,24 @@ form input, form select, form textarea {
   display: block;
   margin: 0 auto;
   border-radius: 8px;
+}
+
+.service-area-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.service-area-section ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-area-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
 }
 
