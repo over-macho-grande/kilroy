@@ -4,6 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #f8f8f8;
   color: #222;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
