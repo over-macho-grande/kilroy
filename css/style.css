@@ -525,3 +525,9 @@ footer {
   position: absolute;
   left: 0;
 }
+
+.chat-icon,
+.custom-chat-btn {
+  max-width: 100%;
+  box-sizing: border-box;
+}
