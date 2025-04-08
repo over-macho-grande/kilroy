@@ -9,164 +9,166 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+          <h1>KILROY HOME SERVICES</h1>
+          <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+          <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
       </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+          ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+          <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+          <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+          <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+          <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+          <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+          <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+          <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+          <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+          <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>      
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="assets/home.png" alt="Home" class="hero-image">
+      <div class="hero-text">
+        <h2>Your Comfort, Our Priority</h2>
+        <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
       </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>      
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero">
-    <img src="assets/home.png" alt="Home" class="hero-image">
-    <div class="hero-text">
-      <h2>Your Comfort, Our Priority</h2>
-      <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
-    </div>
-  </section>
-
-  <section class="services fade-section">
-    <div class="service-box">
-      <img src="assets/hvac_1.jpg" alt="HVAC system" />
-      <h3>HVAC Services</h3>
-      <p>Stay comfortable year-round with expert heating, cooling, and indoor air quality solutions.</p>
-      <a href="hvac.html" class="service-btn">View HVAC Services</a>
-    </div>
-
-    <div class="service-box">
-      <img src="assets/insulation_1.jpg" alt="Insulation" />
-      <h3>Insulation Services</h3>
-      <p>Lower your energy bills and boost comfort with high-efficiency attic and wall insulation.</p>
-      <a href="insulation.html" class="service-btn">Improve Your Home’s Efficiency</a>
-    </div>
-  </section>
-
-  <section class="other-services fade-section">
-    <h2>More Home Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/roofing.jpg" alt="New Roof Installation">
-        <h3>Roofing</h3>
-        <p>Reliable roof inspections, repairs, and full replacements using quality materials.</p>
-        <a href="roofing.html" class="learn-btn">Learn More</a>
+    <section class="services fade-section">
+      <div class="service-box">
+        <img src="assets/hvac_1.jpg" alt="HVAC system" />
+        <h3>HVAC Services</h3>
+        <p>Stay comfortable year-round with expert heating, cooling, and indoor air quality solutions.</p>
+        <a href="hvac.html" class="service-btn">View HVAC Services</a>
       </div>
-      <div class="service-card">
-        <img src="assets/siding.jpg" alt="Home siding options">
-        <h3>Siding</h3>
-        <p>Choose from vinyl, fiber cement, or wood siding for a fresh, durable exterior look.</p>
-        <a href="siding.html" class="learn-btn">Learn More</a>
+
+      <div class="service-box">
+        <img src="assets/insulation_1.jpg" alt="Insulation" />
+        <h3>Insulation Services</h3>
+        <p>Lower your energy bills and boost comfort with high-efficiency attic and wall insulation.</p>
+        <a href="insulation.html" class="service-btn">Improve Your Home’s Efficiency</a>
       </div>
-      <div class="service-card">
-        <img src="assets/windows.jpg" alt="Energy-efficient windows and doors">
-        <h3>Windows & Doors</h3>
-        <p>Upgrade to energy-efficient windows and entry doors for style and savings.</p>
-        <a href="windows.html" class="learn-btn">Learn More</a>
+    </section>
+
+    <section class="other-services fade-section">
+      <h2>More Home Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="assets/roofing.jpg" alt="New Roof Installation">
+          <h3>Roofing</h3>
+          <p>Reliable roof inspections, repairs, and full replacements using quality materials.</p>
+          <a href="roofing.html" class="learn-btn">Learn More</a>
+        </div>
+        <div class="service-card">
+          <img src="assets/siding.jpg" alt="Home siding options">
+          <h3>Siding</h3>
+          <p>Choose from vinyl, fiber cement, or wood siding for a fresh, durable exterior look.</p>
+          <a href="siding.html" class="learn-btn">Learn More</a>
+        </div>
+        <div class="service-card">
+          <img src="assets/windows.jpg" alt="Energy-efficient windows and doors">
+          <h3>Windows & Doors</h3>
+          <p>Upgrade to energy-efficient windows and entry doors for style and savings.</p>
+          <a href="windows.html" class="learn-btn">Learn More</a>
+        </div>
+        <div class="service-card">
+          <img src="assets/bathroom.jpg" alt="Modern bathroom remodel">
+          <h3>Bathroom Remodeling</h3>
+          <p>Transform your bathroom into a relaxing, functional space with our expert remodeling services.</p>
+          <a href="bathroom.html" class="learn-btn">View Bathroom Services</a>
+        </div>
       </div>
-      <div class="service-card">
-        <img src="assets/bathroom.jpg" alt="Modern bathroom remodel">
-        <h3>Bathroom Remodeling</h3>
-        <p>Transform your bathroom into a relaxing, functional space with our expert remodeling services.</p>
-        <a href="bathroom.html" class="learn-btn">View Bathroom Services</a>
+    </section>
+
+    <section class="testimonials fade-section">
+      <h2>What Our Customers Are Saying</h2>
+      <div class="testimonial-container">
+        <button class="arrow" onclick="prevTestimonial()">&#10094;</button>
+        <div class="testimonial" id="testimonial"></div>
+        <button class="arrow" onclick="nextTestimonial()">&#10095;</button>
       </div>
+    </section>
+
+    <section class="why-choose-us fade-section">
+      <h2>Why Choose Kilroy Home Services?</h2>
+      <ul>
+        <li>✔ Over 48 years of experience in home services</li>
+        <li>✔ Licensed, bonded, and insured professionals</li>
+        <li>✔ Satisfaction guaranteed on every project</li>
+        <li>✔ Energy-efficient and cost-saving solutions</li>
+        <li>✔ Locally owned and community trusted</li>
+      </ul>
+    </section>
+
+    <section class="fade-section service-area-section">
+      <h2>Our Service Area</h2>
+      <img src="assets/map.png" alt="Service Area Map" class="static-map">
+    </section>     
+
+    <section class="contact-form fade-section" id="contact">
+      <h2>Contact for More Information</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="hvac">HVAC</option>
+          <option value="insulation">Insulation</option>
+          <option value="roofing">Roofing</option>
+          <option value="siding">Siding</option>
+          <option value="windows">Windows & Doors</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us more..."></textarea>
+        <button type="submit">Submit</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </section>          
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+          Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+      </div>
+    </footer>
+
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+      <img src="assets/chat-icon.png" alt="Chat with us">
+      <span class="chat-label">Chat With Us!</span>
     </div>
-  </section>
 
-  <section class="testimonials fade-section">
-    <h2>What Our Customers Are Saying</h2>
-    <div class="testimonial-container">
-      <button class="arrow" onclick="prevTestimonial()">&#10094;</button>
-      <div class="testimonial" id="testimonial"></div>
-      <button class="arrow" onclick="nextTestimonial()">&#10095;</button>
-    </div>
-  </section>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
 
-  <section class="why-choose-us fade-section">
-    <h2>Why Choose Kilroy Home Services?</h2>
-    <ul>
-      <li>✔ Over 48 years of experience in home services</li>
-      <li>✔ Licensed, bonded, and insured professionals</li>
-      <li>✔ Satisfaction guaranteed on every project</li>
-      <li>✔ Energy-efficient and cost-saving solutions</li>
-      <li>✔ Locally owned and community trusted</li>
-    </ul>
-  </section>
-
-  <section class="fade-section service-area-section">
-    <h2>Our Service Area</h2>
-    <img src="assets/map.png" alt="Service Area Map" class="static-map">
-  </section>     
-
-  <section class="contact-form fade-section" id="contact">
-    <h2>Contact for More Information</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more..."></textarea>
-      <button type="submit">Submit</button>
-      <div id="form-status" class="form-status"></div>
-    </form>
-  </section>          
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-         Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
-    </div>
-  </footer>
-
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us">
-    <span class="chat-label">Chat With Us!</span>
+      Tawk_API.onLoad = function () {
+        Tawk_API.hideWidget();
+      };
+    </script>
   </div>
-
-  <script src="js/script.js"></script>
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-
-    Tawk_API.onLoad = function () {
-      Tawk_API.hideWidget();
-    };
-  </script>
 </body>
 </html>
