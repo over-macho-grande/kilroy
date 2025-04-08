@@ -3,128 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HVAC Services | Kilroy Home Services</title>
+  <title>HVAC | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+          <h1>KILROY HOME SERVICES</h1>
+          <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+          <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
       </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+          ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+          <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+          <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+          <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+          <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+          <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+          <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+          <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+          <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+          <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="assets/hvac_1.jpg" alt="HVAC System" class="hero-image" />
+      <div class="hero-text">
+        <h2>Your HVAC Experts</h2>
+        <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
       </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="assets/hvac_1.jpg" alt="HVAC Services" class="hero-image" />
-    <div class="hero-text">
-      <h2>Reliable Heating & Cooling Solutions</h2>
-      <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
-    </div>
-  </section>
-
-  <section class="fade-section services" style="max-width: 1000px; margin: 2rem auto;">
-    <section class="service-area-section">
-      <h2>Our HVAC Services</h2>
-      <ul class="checklist">
-        <li><strong>Furnace, AC & Heat Pump Installation</strong> – Upgrade your home's comfort and efficiency with expert installation of furnaces, air conditioners, and heat pumps. We tailor every system to fit your space and your needs.</li>
-        <li><strong>HVAC System Repairs</strong> – Fast, reliable repairs for your heating and cooling systems. Whether it’s your furnace, A/C, or heat pump, we’ll get your system back up and running quickly.</li>
-        <li><strong>Ductwork Installation & Sealing</strong> – Improve airflow, energy efficiency, and overall system performance with professional ductwork design, installation, and air sealing.</li>
-        <li><strong>Seasonal Tune-Ups & Maintenance</strong> – Extend the life of your HVAC system and prevent breakdowns with routine maintenance and seasonal tune-ups.</li>
-        <li><strong>Indoor Air Quality Solutions</strong> – Enhance the health and comfort of your home with advanced air filtration, ventilation, and purification systems.</li>
-        <li><strong>Emergency Service</strong> – Available 24/7 for urgent heating or cooling issues.</li>
-      </ul>
     </section>
-  
-    <h3>Why Upgrade Your HVAC System?</h3>
-    <p>
-      Ohio’s climate puts your heating and cooling system to the test year-round. Upgrading to a modern, high-efficiency furnace, air conditioner, or heat pump ensures reliable comfort through every season — while also saving you money.
-    </p>
-    <p>
-      Today’s systems are built with smart technology, variable-speed operation, and advanced filtration for better temperature control, improved indoor air quality, and quieter operation. You’ll enjoy lower energy bills, fewer repairs, and a more comfortable, healthier home.
-    </p>
-    <p>
-      Plus, you may qualify for <strong>valuable rebates and incentives</strong> that help offset the upfront cost. With the right system, the long-term savings and performance improvements speak for themselves.
-    </p>
-  
-    <h3>Need Help?</h3>
-    <p>
-      We specialize in residential HVAC solutions tailored to your home and budget. For 24/7 emergency service, call us anytime at <a href="tel:2166812500">(216) 681-2500</a> (Option 2).
-    </p>
-  </section>  
 
-  <section class="contact-form fade-section" id="contact">
-    <h2>Contact for More Information</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more..."></textarea>
-      <button type="submit">Submit</button>
-      <div id="form-status" class="form-status"></div>
-    </form>
-  </section>  
+    <section class="fade-section services">
+      <div class="service-inner">
+        <h2>Our HVAC Services</h2>
+        <ul class="checklist">
+          <li><strong>Furnace, AC & Heat Pump Installation</strong> – Upgrade your home's comfort and efficiency with expert installation of furnaces, air conditioners, and heat pumps. We tailor every system to fit your space and your needs.</li>
+          <li><strong>HVAC System Repairs</strong> – Fast, reliable repairs for your heating and cooling systems. Whether it’s your furnace, A/C, or heat pump, we’ll get your system back up and running quickly.</li>
+          <li><strong>Ductwork Installation & Sealing</strong> – Improve airflow, energy efficiency, and overall system performance with professional ductwork design, installation, and air sealing.</li>
+          <li><strong>Seasonal Tune-Ups & Maintenance</strong> – Extend the life of your HVAC system and prevent breakdowns with routine maintenance and seasonal tune-ups.</li>
+          <li><strong>Indoor Air Quality Solutions</strong> – Enhance the health and comfort of your home with advanced air filtration, ventilation, and purification systems.</li>
+          <li><strong>Emergency Service</strong> – Available 24/7 for urgent heating or cooling issues.</li>
+        </ul>
+      </div>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
+      <h3>Why Upgrade Your HVAC System?</h3>
+      <p>
+        Ohio’s climate puts your heating and cooling system to the test year-round. Upgrading to a modern, high-efficiency furnace, air conditioner, or heat pump ensures reliable comfort through every season — while also saving you money.
+      </p>
+      <p>
+        Today’s systems are built with smart technology, variable-speed operation, and advanced filtration for better temperature control, improved indoor air quality, and quieter operation. You’ll enjoy lower energy bills, fewer repairs, and a more comfortable, healthier home.
+      </p>
+      <p>
+        Plus, you may qualify for <strong>valuable rebates and incentives</strong> that help offset the upfront cost. With the right system, the long-term savings and performance improvements speak for themselves.
+      </p>
+
+      <h3>Need Help?</h3>
+      <p>
+        We specialize in residential HVAC solutions tailored to your home and budget. For 24/7 emergency service, call us anytime at <a href="tel:2166812500">(216) 681-2500</a> (Option 2).
+      </p>
+    </section>
+
+    <section class="contact-form fade-section" id="contact">
+      <h2>Contact for More Information</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="hvac">HVAC</option>
+          <option value="insulation">Insulation</option>
+          <option value="roofing">Roofing</option>
+          <option value="siding">Siding</option>
+          <option value="windows">Windows & Doors</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us more..."></textarea>
+        <button type="submit">Submit</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </section>  
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+          Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+      </div>
+    </footer>
+
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+      <img src="assets/chat-icon.png" alt="Chat with us" />
+      <span class="chat-label">Chat With Us!</span>
     </div>
-  </footer>
 
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us" />
-    <span class="chat-label">Chat With Us!</span>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+      setInterval(() => {
+        const nativeWidget = document.querySelector("iframe[src*='tawk']");
+        if (nativeWidget) nativeWidget.style.display = 'none';
+      }, 500);
+    </script>
   </div>
-
-  <script src="js/script.js"></script>
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-    setInterval(() => {
-      const nativeWidget = document.querySelector("iframe[src*='tawk']");
-      if (nativeWidget) nativeWidget.style.display = 'none';
-    }, 500);
-  </script>
 </body>
 </html>

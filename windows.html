@@ -3,115 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Window & Door Services | Kilroy Home Services</title>
+  <title>Windows & Doors | Kilroy Home Services</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+          <h1>KILROY HOME SERVICES</h1>
+          <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+          <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
       </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+          ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+          <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+          <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+          <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+          <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+          <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+          <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+          <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+          <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+          <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="assets/windows.jpg" alt="Windows and Doors" class="hero-image" />
+      <div class="hero-text">
+        <h2>Windows & Doors</h2>
+        <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
       </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero">
-    <img src="assets/windows.jpg" alt="Windows and Doors" class="hero-image" />
-    <div class="hero-text">
-      <h2>Upgrade with Energy-Efficient Windows & Doors</h2>
-      <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
+    <section class="fade-section services">
+      <h2 style="text-align: center;">Windows & Doors Services</h2>
+      <div class="service-inner">
+        <ul class="checklist">
+          <li><strong>Window Replacements</strong> – Energy-efficient, low-maintenance, and beautiful window upgrades for any home style.</li>
+          <li><strong>Door Installations</strong> – Entry, storm, patio, and custom doors that enhance both curb appeal and home security.</li>
+          <li><strong>Sliding & French Doors</strong> – Elegant and functional transitions to outdoor living spaces.</li>
+          <li><strong>Custom Sizes & Styles</strong> – We offer a wide range of materials, colors, and configurations to match your needs.</li>
+          <li><strong>Weatherproofing & Sealing</strong> – Ensure long-term comfort and savings with professional insulation and sealing.</li>
+        </ul>
+      </div>
+    
+      <h3 style="text-align: center;">Upgrade Your Home’s Look and Efficiency</h3>
+      <p>
+        Replacing windows and doors doesn’t just modernize your home—it helps lower utility bills and boosts resale value. Talk to us today about how new windows and doors can transform your space.
+      </p>
+    </section>
+    
+    <section class="contact-form fade-section" id="contact">
+      <h2>Contact for More Information</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="hvac">HVAC</option>
+          <option value="insulation">Insulation</option>
+          <option value="roofing">Roofing</option>
+          <option value="siding">Siding</option>
+          <option value="windows">Windows & Doors</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us more..."></textarea>
+        <button type="submit">Submit</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+          Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+      </div>
+    </footer>
+
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+      <img src="assets/chat-icon.png" alt="Chat with us" />
+      <span class="chat-label">Chat With Us!</span>
     </div>
-  </section>
 
-  <section class="fade-section services">
-    <div style="max-width: 1000px; margin: 0 auto;">
-      <h2>Window & Door Installation</h2>
-      <p>Enhance your home’s beauty, comfort, and energy efficiency with expertly installed, high-performance windows and doors—custom-fit for lasting results.</p>
-      <ul class="checklist">
-        <li><strong>Window Replacement</strong> – Upgrade to energy-efficient double-pane, triple-pane, or low-E glass windows that improve insulation, reduce outside noise, and lower energy bills.</li>
-        <li><strong>Entry Doors</strong> – Make a strong first impression while enhancing security. Choose from steel, fiberglass, or wood entry doors in a variety of elegant designs and finishes.</li>
-        <li><strong>Sliding & Patio Doors</strong> – Create a seamless connection between indoor and outdoor living spaces. Our sliding and patio doors offer smooth operation, modern style, and advanced thermal performance.</li>
-        <li><strong>Custom Fit & Finish</strong> – Every installation is tailored to your home. We ensure precise measurements, a flawless fit, and professional sealing for maximum energy savings and long-term durability.</li>
-      </ul>
-
-      <h2>Why Upgrade Your Windows & Doors?</h2>
-      <p>Outdated windows and doors can be a major source of drafts, high energy bills, and reduced security. New, high-efficiency replacements not only improve indoor comfort and energy performance—they also enhance your home’s curb appeal and resale value. It’s an investment that pays off in both savings and style.</p>
-    </div>
-  </section>
-
-  <section class="contact-form fade-section" id="contact">
-    <h2>Contact for More Information</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more..."></textarea>
-      <button type="submit">Submit</button>
-      <div id="form-status" class="form-status"></div>
-    </form>
-  </section>  
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
-    </div>
-  </footer>
-
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us" />
-    <span class="chat-label">Chat With Us!</span>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+      setInterval(() => {
+        const nativeWidget = document.querySelector("iframe[src*='tawk']");
+        if (nativeWidget) nativeWidget.style.display = 'none';
+      }, 500);
+    </script>
   </div>
-
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-    setInterval(() => {
-      const nativeWidget = document.querySelector("iframe[src*='tawk']");
-      if (nativeWidget) nativeWidget.style.display = 'none';
-    }, 500);
-  </script>
-
-  <script src="js/script.js"></script>
 </body>
 </html>

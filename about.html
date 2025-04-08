@@ -9,112 +9,114 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+          <h1>KILROY HOME SERVICES</h1>
+          <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+          <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
       </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+          ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+          <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+          <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+          <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+          <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+          <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+          <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+          <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+          <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+          <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>      
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
+      <div class="hero-text">
+        <h2>About Kilroy Home Services</h2>
       </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>      
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero">
-    <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
-    <div class="hero-text">
-      <h2>About Kilroy Home Services</h2>
+    <section class="fade-section services" style="max-width: 1000px; margin: 0 auto; text-align: left;">
+      <h2>Who We Are</h2>
+      <p>At Kilroy Home Services, we’re more than contractors—we’re your neighbors. Founded right here in Northeast Ohio, we’ve spent over 48 years helping families make their homes safer, more efficient, and more beautiful. We believe in craftsmanship, trust, and treating every customer like family.</p>
+
+      <h2>Our Mission</h2>
+      <p>We aim to deliver high-quality home improvement services with honesty, transparency, and exceptional care. Whether it’s HVAC, insulation, roofing, or windows, our licensed professionals go above and beyond to do the job right the first time.</p>
+
+      <h2>Why Choose Us?</h2>
+      <ul class="checklist">
+        <li>Family-Owned & Operated</li>
+        <li>48+ Years of Experience</li>
+        <li>Fully Licensed, Bonded, and Insured</li>
+        <li>Transparent Pricing, No Hidden Fees</li>
+        <li>100% Satisfaction Guarantee</li>
+      </ul>
+
+    </section>
+
+    <section class="contact-form fade-section" id="contact">
+      <h2>Contact for More Information</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="hvac">HVAC</option>
+          <option value="insulation">Insulation</option>
+          <option value="roofing">Roofing</option>
+          <option value="siding">Siding</option>
+          <option value="windows">Windows & Doors</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us more..."></textarea>
+        <button type="submit">Submit</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </section>  
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+          Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+      </div>
+    </footer>
+
+    <!-- ✅ Custom Chat Icon -->
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+      <img src="assets/chat-icon.png" alt="Chat with us" />
+      <span class="chat-label">Chat With Us!</span>
     </div>
-  </section>
 
-  <section class="fade-section services" style="max-width: 1000px; margin: 0 auto; text-align: left;">
-    <h2>Who We Are</h2>
-    <p>At Kilroy Home Services, we’re more than contractors—we’re your neighbors. Founded right here in Northeast Ohio, we’ve spent over 48 years helping families make their homes safer, more efficient, and more beautiful. We believe in craftsmanship, trust, and treating every customer like family.</p>
+    <!-- ✅ Tawk.to with Widget Hidden -->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+      setInterval(() => {
+        const nativeWidget = document.querySelector("iframe[src*='tawk']");
+        if (nativeWidget) nativeWidget.style.display = 'none';
+      }, 500);
+    </script>
 
-    <h2>Our Mission</h2>
-    <p>We aim to deliver high-quality home improvement services with honesty, transparency, and exceptional care. Whether it’s HVAC, insulation, roofing, or windows, our licensed professionals go above and beyond to do the job right the first time.</p>
-
-    <h2>Why Choose Us?</h2>
-    <ul class="checklist">
-      <li>Family-Owned & Operated</li>
-      <li>48+ Years of Experience</li>
-      <li>Fully Licensed, Bonded, and Insured</li>
-      <li>Transparent Pricing, No Hidden Fees</li>
-      <li>100% Satisfaction Guarantee</li>
-    </ul>
-
-  </section>
-
-  <section class="contact-form fade-section" id="contact">
-    <h2>Contact for More Information</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more..."></textarea>
-      <button type="submit">Submit</button>
-      <div id="form-status" class="form-status"></div>
-    </form>
-  </section>  
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
-    </div>
-  </footer>
-
-  <!-- ✅ Custom Chat Icon -->
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us" />
-    <span class="chat-label">Chat With Us!</span>
+    <script src="js/script.js"></script>
   </div>
-
-  <!-- ✅ Tawk.to with Widget Hidden -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-    setInterval(() => {
-      const nativeWidget = document.querySelector("iframe[src*='tawk']");
-      if (nativeWidget) nativeWidget.style.display = 'none';
-    }, 500);
-  </script>
-
-  <script src="js/script.js"></script>
 </body>
 </html>

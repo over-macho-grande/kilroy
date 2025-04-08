@@ -9,86 +9,88 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
-      </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
-      </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>      
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+        <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+            <h1>KILROY HOME SERVICES</h1>
+            <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+            <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
+        </div>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+            ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+            <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+            <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+            <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+            <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+            <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+            <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+            <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+            <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>      
+        </nav>
+    </header>
 
-  <section class="hero">
-    <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
-    <div class="hero-text">
-      <h2>Schedule a Free Consultation</h2>
-    </div>
-  </section>
+    <section class="hero">
+        <img src="assets/kilroy-trucks.png" alt="Kilroy Trucks" class="hero-image" />
+        <div class="hero-text">
+        <h2>Schedule a Free Consultation</h2>
+        </div>
+    </section>
 
-  <section class="fade-section calendar-embed" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
-    <div style="position: relative; overflow: hidden; width: 100%;">
-      <iframe
-        src="https://tidycal.com/kilroyhomeservices/consultation"
-        style="border: none; width: 100%; height: 1100px;"
-        frameborder="0"
-        allowfullscreen
-        title="Book a consultation with Kilroy Home Services"
-      ></iframe>
-    </div>
-  </section>
+    <section class="fade-section calendar-embed" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+        <div style="position: relative; overflow: hidden; width: 100%;">
+        <iframe
+            src="https://tidycal.com/kilroyhomeservices/consultation"
+            style="border: none; width: 100%; height: 1100px;"
+            frameborder="0"
+            allowfullscreen
+            title="Book a consultation with Kilroy Home Services"
+        ></iframe>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+            Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+        </div>
+    </footer>
 
-  <!-- ✅ Custom Chat Icon -->
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us" />
-    <span class="chat-label">Chat With Us!</span>
+    <!-- ✅ Custom Chat Icon -->
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+        <img src="assets/chat-icon.png" alt="Chat with us" />
+        <span class="chat-label">Chat With Us!</span>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <!-- ✅ Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+        })();
+
+        Tawk_API.onLoad = function () {
+        Tawk_API.hideWidget();
+        };
+    </script>
   </div>
-
-  <script src="js/script.js"></script>
-
-  <!-- ✅ Tawk.to Script -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-
-    Tawk_API.onLoad = function () {
-      Tawk_API.hideWidget();
-    };
-  </script>
 </body>
 </html>

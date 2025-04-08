@@ -9,112 +9,114 @@
   <link rel="icon" href="assets/favicon.ico" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
-      <div class="header-info">
-        <h1>KILROY HOME SERVICES</h1>
-        <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
-        <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <img src="assets/logo.png" alt="Kilroy Logo" class="logo" />
+        <div class="header-info">
+          <h1>KILROY HOME SERVICES</h1>
+          <a href="tel:2166812500" class="phone">Call: (216) 681-2500</a>
+          <button class="quote-btn" onclick="location.href='contact.html#contact'">Get a Free Quote</button>
+        </div>
       </div>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-        ☰ <span class="hamburger-label">Menu</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+          ☰ <span class="hamburger-label">Menu</span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+          <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
+          <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
+          <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
+          <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
+          <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
+          <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
+          <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
+          <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
+          <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="assets/insulation_1.jpg" alt="Home Insulation" class="hero-image" />
+      <div class="hero-text">
+        <h2>Efficient Home Insulation Services</h2>
+        <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
       </div>
-      <ul id="nav-menu">
-        <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-        <li><a href="hvac.html" onclick="closeMenu()">HVAC</a></li>
-        <li><a href="insulation.html" onclick="closeMenu()">Insulation</a></li>
-        <li><a href="roofing.html" onclick="closeMenu()">Roofing</a></li>
-        <li><a href="siding.html" onclick="closeMenu()">Siding</a></li>
-        <li><a href="windows.html" onclick="closeMenu()">Windows & Doors</a></li>
-        <li><a href="bathroom.html" onclick="closeMenu()">Bathroom Remodeling</a></li>
-        <li><a href="about.html" onclick="closeMenu()">About Us</a></li>
-        <li><a href="team.html" onclick="closeMenu()">Meet the Team</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero">
-    <img src="assets/insulation_1.jpg" alt="Home Insulation" class="hero-image" />
-    <div class="hero-text">
-      <h2>Efficient Home Insulation Services</h2>
-      <a href="scheduleconsultation.html" class="cta-button">Schedule a Free Consultation</a>
+    <section class="fade-section services">
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <h2>Professional Insulation Services</h2>
+        <p>Maximize comfort, lower energy bills, and protect your home with expertly installed insulation designed for Ohio’s demanding climate.</p>
+        <ul class="checklist">
+          <li><strong>Attic Insulation</strong> – Improve year-round comfort and energy efficiency by preventing heat loss and heat gain where it matters most.</li>
+          <li><strong>Wall & Crawl Space Insulation</strong> – Eliminate drafts, reduce moisture buildup, and protect your home from mold and mildew with targeted insulation solutions.</li>
+          <li><strong>Blown-In & Spray Foam Options</strong> – From cost-effective blown-in insulation to high-performance spray foam, we’ll help you choose the right material for your home and budget.</li>
+          <li><strong>Energy Efficiency Assessments</strong> – Uncover hidden inefficiencies and get clear, expert recommendations to make your home more comfortable and cost-effective.</li>
+        </ul>
+
+        <h2>Why Invest in Insulation?</h2>
+        <p>Proper insulation is one of the smartest investments you can make in your home. It reduces utility bills, enhances indoor comfort, and takes the strain off your HVAC system—helping it last longer and perform better. With Ohio’s temperature extremes, insulation helps keep your home warm in the winter, cool in the summer, and efficient all year long.</p>
+
+        <h2>Expert Guidance You Can Trust</h2>
+        <p>Every home is different—so we take a tailored approach. Our experienced team will assess your home’s needs, recommend the most effective solution, and deliver a clean, professional installation that gets results.</p>
+      </div>
+    </section>
+
+    <section class="contact-form fade-section" id="contact">
+      <h2>Contact for More Information</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="hvac">HVAC</option>
+          <option value="insulation">Insulation</option>
+          <option value="roofing">Roofing</option>
+          <option value="siding">Siding</option>
+          <option value="windows">Windows & Doors</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us more..."></textarea>
+        <button type="submit">Submit</button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </section>  
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Kilroy Home Services</p>
+        <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
+          Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
+        <p>874 East 140th Street, Cleveland OH 44110</p>
+      </div>
+    </footer>
+
+    <div class="chat-icon" onclick="Tawk_API?.maximize()">
+      <img src="assets/chat-icon.png" alt="Chat with us" />
+      <span class="chat-label">Chat With Us!</span>
     </div>
-  </section>
 
-  <section class="fade-section services">
-    <div style="max-width: 1000px; margin: 0 auto;">
-      <h2>Professional Insulation Services</h2>
-      <p>Maximize comfort, lower energy bills, and protect your home with expertly installed insulation designed for Ohio’s demanding climate.</p>
-      <ul class="checklist">
-        <li><strong>Attic Insulation</strong> – Improve year-round comfort and energy efficiency by preventing heat loss and heat gain where it matters most.</li>
-        <li><strong>Wall & Crawl Space Insulation</strong> – Eliminate drafts, reduce moisture buildup, and protect your home from mold and mildew with targeted insulation solutions.</li>
-        <li><strong>Blown-In & Spray Foam Options</strong> – From cost-effective blown-in insulation to high-performance spray foam, we’ll help you choose the right material for your home and budget.</li>
-        <li><strong>Energy Efficiency Assessments</strong> – Uncover hidden inefficiencies and get clear, expert recommendations to make your home more comfortable and cost-effective.</li>
-      </ul>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+      setInterval(() => {
+        const nativeWidget = document.querySelector("iframe[src*='tawk']");
+        if (nativeWidget) nativeWidget.style.display = 'none';
+      }, 500);
+    </script>
 
-      <h2>Why Invest in Insulation?</h2>
-      <p>Proper insulation is one of the smartest investments you can make in your home. It reduces utility bills, enhances indoor comfort, and takes the strain off your HVAC system—helping it last longer and perform better. With Ohio’s temperature extremes, insulation helps keep your home warm in the winter, cool in the summer, and efficient all year long.</p>
-
-      <h2>Expert Guidance You Can Trust</h2>
-      <p>Every home is different—so we take a tailored approach. Our experienced team will assess your home’s needs, recommend the most effective solution, and deliver a clean, professional installation that gets results.</p>
-    </div>
-  </section>
-
-  <section class="contact-form fade-section" id="contact">
-    <h2>Contact for More Information</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="hvac">HVAC</option>
-        <option value="insulation">Insulation</option>
-        <option value="roofing">Roofing</option>
-        <option value="siding">Siding</option>
-        <option value="windows">Windows & Doors</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more..."></textarea>
-      <button type="submit">Submit</button>
-      <div id="form-status" class="form-status"></div>
-    </form>
-  </section>  
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Kilroy Home Services</p>
-      <p>Phone: <a href="tel:2166812500">(216) 681-2500</a> |
-        Email: <a href="mailto:info@kilroyhomeservices.com">info@kilroyhomeservices.com</a></p>
-      <p>874 East 140th Street, Cleveland OH 44110</p>
-    </div>
-  </footer>
-
-  <div class="chat-icon" onclick="Tawk_API?.maximize()">
-    <img src="assets/chat-icon.png" alt="Chat with us" />
-    <span class="chat-label">Chat With Us!</span>
+    <script src="js/script.js"></script>
   </div>
-
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67eb033b33873c190ee6aeb7/1inn098f0';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-    setInterval(() => {
-      const nativeWidget = document.querySelector("iframe[src*='tawk']");
-      if (nativeWidget) nativeWidget.style.display = 'none';
-    }, 500);
-  </script>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
